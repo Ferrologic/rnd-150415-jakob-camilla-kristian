@@ -39,6 +39,10 @@ public class TjatRoute extends RouteBuilder {
 			})
 			.to("log:CHAT_MESSAGE")
 			.routeId("ws.topic.chat.message");
+		
+		from("direct:chat-message-out").to(pahoTjat)
+			.routeId("chat-out websocket to mqtt");
+		
 		// @formatter:on
 
 	}
