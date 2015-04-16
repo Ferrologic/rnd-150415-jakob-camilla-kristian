@@ -27,7 +27,7 @@ public class MockSensorRoute extends RouteBuilder {
 		pahoHelloWorld.setBrokerUrl(brokerUrl);
 
 		// @formatter:off
-		from("timer://mockSensor")
+		from("timer://mockSensor?period=10000")
 			.process(e -> {
 				// Get sensor data
 				String sensorData = UUID.randomUUID().toString();
