@@ -1,6 +1,6 @@
 # ferro-rnd-150415
 
-This is a spring boot application where we wanted to test embedding an mqtt-client, camel & websocket. Its GUI is angular-based and simply shows data that arrives to the topics is presentented in the flowchart below. The GUI is also able to send data to the chat-topic via a websocket -> mqtt route.
+This is a spring boot application where we wanted to test embedding an mqtt-client, camel & websocket. Its GUI is angular-based and simply shows data that arrives to the topics is presentented in the flowchart below. The GUI is also able to send data to the chat-topic via a websocket -> mqtt route. The whole server has been tested to run smoothly on a raspberry pi.
 
 To run: 
 
