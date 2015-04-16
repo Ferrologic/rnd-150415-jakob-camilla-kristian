@@ -5,8 +5,9 @@ This is a spring boot application where we wanted to test embedding an mqtt-clie
 To run: 
 
 1. Clone the repo `git clone https://github.com/jakobthun/ferro-rnd-150415.git`
-2. Run on windows `.\gradlew.bat bootRun` or on mac/linux `./gradlew.sh bootRun`
-3. Open browser on `http://localhost:3333` or the port you set in `application.properties`
+2. Go into the `tjat` folder `cd ferro-rnd-150415/tjat`
+3. Run on windows `.\gradlew.bat bootRun` or on mac/linux `./gradlew.sh bootRun`
+4. Open browser on `http://localhost:3333` or the port you set in `application.properties`
 
 It requires a running mqtt-broker, currently there is a mosquitto broker running at backend.ipaas.io:10383. If it is down you may have to run your own broker. In that case use `application.properties` to configure your own broker URL.
 
