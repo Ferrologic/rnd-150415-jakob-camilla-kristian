@@ -9,7 +9,7 @@ To run:
 3. Run on windows `.\gradlew.bat bootRun` or on mac/linux `./gradlew.sh bootRun`
 4. Open browser on `http://localhost:3333` or the port you set in `application.properties`
 
-It requires a running mqtt-broker, currently there is a mosquitto broker running at backend.ipaas.io:10383. If it is down you may have to run your own broker. In that case use `application.properties` to configure your own broker URL.
+It requires a running mqtt-broker, currently there is a mosquitto broker running at backend.ipaas.io:10383. If it is down you have to run your own broker. In that case use `application.properties` to configure your own broker URL.
 
 ```
                        +-------------------------+                               
