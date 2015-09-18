@@ -1,0 +1,59 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'spring-boot'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+group = 'ferrologic'
+mainClassName = "se.ferrologic.rnd.oystein.Main"
+
+jar {
+    baseName = 'se-ferrologic-rnd-oystein'
+    version =  '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+    maven { url { "https://repository.apache.org/content/repositories/snapshots" } }
+    maven { url { "https://repo.eclipse.org/content/repositories/paho-releases" } }
+}
+
+dependencies {
+    def camelVersion = "2.16-SNAPSHOT"
+    def springBootVersion = "1.2.3.RELEASE"
+    def hawtioVersion = "2.0.0"
+    
+    //Spring boot
+    compile("org.springframework.boot:spring-boot-starter-web:" + springBootVersion)
+    compile("org.springframework.boot:spring-boot-starter-jetty:" + springBootVersion)
+    compile("org.springframework.boot:spring-boot-starter-actuator:" + springBootVersion)
+
+    
+    compile("de.codecentric:spring-boot-admin-starter-client:1.2.0")
+    
+    // Camel
+    compile("org.apache.camel:camel-core:"+camelVersion)
+    compile("org.apache.camel:camel-jackson:"+camelVersion)
+    compile("org.apache.camel:camel-servlet:"+camelVersion)
+    compile("org.apache.camel:camel-swagger:"+camelVersion)
+    compile("org.apache.camel:camel-metrics:"+camelVersion)
+    compile("org.apache.camel:camel-spring-boot:"+camelVersion)
+    compile("org.apache.camel:camel-cxf:"+camelVersion)
+
+    // Utils
+    compile("org.jolokia:jolokia-core:1.2.3")
+
+    // Test
+    testCompile 'junit:junit:4.12'
+}
